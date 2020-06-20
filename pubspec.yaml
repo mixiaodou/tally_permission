@@ -1,0 +1,27 @@
+name: tally_permission
+description: only for zhaopai_tally
+version: 0.0.1
+author:
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  analyzer: ">=0.37.0 <0.40.0"
+  build: ^1.0.0
+  source_gen: ^0.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+

@@ -1,0 +1,32 @@
+targets:
+  $default:
+    builders:
+      #构建器的名称
+      widget_permission:
+        enabled: true
+      tally_permission:
+        enabled: true
+
+
+builders:
+  #  #构建器的名称
+  #  widget_permission:
+  #    #builder的路径
+  #    import: "package:tally_permission/builder.dart"
+  #    #builder的对应method
+  #    builder_factories: ["widgetPermissionBuilder"]
+  #    build_extensions: {".dart": ["widgetPermission.g.part"]}
+  #    auto_apply: dependents
+  #    build_to: cache
+  #    applies_builders: ["source_gen|combining_builder"]
+
+  #构建器的名称
+  tally_permission:
+    #builder的路径
+    import: "package:tally_permission/builder.dart"
+    #builder的对应method
+    builder_factories: ["tallyPermissionBuilder"]
+    build_extensions: {".dart": [".tally.dart"]}
+    auto_apply: dependents
+    build_to: source
+
