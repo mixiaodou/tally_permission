@@ -30,18 +30,18 @@ class StationModel extends Object {
 }
 ```
 在类声明的同级位置添加了这样 一个引入外部文件的声明，然后执行了这个命令
->flutter pub run build_runner build
+> flutter pub run build_runner build
 
 就在同级的文件下生成了一个新的文件，很是奇怪；Android中也有注解的概念，如果要自动生成代码 通常会定义注解处理器，在编译过程中扫描指定的注解，读取代码的元素信息（注释，注解，code声明）然后生成代码，dart显然也是类似的
->Provides [source_gen](https://pub.dev/packages/source_gen) `Generator`s to create code for JSON serialization and deserialization.
+> Provides [source_gen](https://pub.dev/packages/source_gen) `Generator`s to create code for JSON serialization and deserialization.
 
 这是json_serializable 官方的介绍，基于source_gen
 
-##build_runner和source_gen
+## build_runner和source_gen
 [build_runner](https://github.com/dart-lang/build/tree/master/build_runner)  build_runner提供了编译dart代码的命令，而且是pub命令之外的（只是通过pub命令执行build_runner命令）。通常结合source_gen使用，使用source_gen创建builder 代码编译器，然后build_runner可选择性的进行配置builder，最后执行build_runner命令 执行builder的代码 自动生成代码。
 builder绑定了gennerator代码生成器，定义了代码生成规则。
 
->Standalone generator and watcher for Dart using [`package:build`](https://pub.dev/packages/build).
+> Standalone generator and watcher for Dart using [`package:build`](https://pub.dev/packages/build).
 ...
 The build_runner package provides a concrete way of generating files using Dart code, outside of tools like pub
 
@@ -50,7 +50,7 @@ The build_runner package provides a concrete way of generating files using Dart 
 builder_runner包含在build库中，但是没有被flutter环境默认引入，如果使用需要手动引入；
 
 
-##为什么使用source_gen
+## 为什么使用source_gen
 source_gen 提供了简化的api 来自动生成代码；
  >`source_gen` provides an API and tooling that is easily usable on top of `build` to make common tasks easier and more developer friendly. For example the [`PartBuilder`](https://pub.dev/documentation/source_gen/latest/source_gen/PartBuilder-class.html) class wraps one or more [`Generator`](https://pub.dev/documentation/source_gen/latest/source_gen/Generator-class.html) instances to make a [`Builder`](https://pub.dev/documentation/build/latest/build/Builder-class.html) which creates `part of` files, while the [`LibraryBuilder`](https://pub.dev/documentation/source_gen/latest/source_gen/LibraryBuilder-class.html) class wraps a single Generator to make a `Builder` which creates Dart library files.
 
