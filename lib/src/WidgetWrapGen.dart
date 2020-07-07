@@ -37,7 +37,7 @@ class WidgetWrapGen extends GeneratorForAnnotation<TallyPermission> {
             first=false;
             stringBuffer.write('''
             import 'package:flutter/material.dart';
-            import 'package:zhaopai_tally/permission/PermissionWidget.dart';
+            import 'package:zh_tally/permission/PermissionWidget.dart';
           
           ''');
           }
